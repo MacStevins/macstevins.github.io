@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+	font-family: -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	user-select: none;
+}
+
+html {
+	background-color: rgb(255, 253, 244);
+	overflow: hidden;
+}
+
+body {
+	margin: auto;
+	max-width: 88.6em;
+	width: 74%;
+}
+
+div#title {
+	/* text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.308); */
+	display: block;
+	font-family: Montserrat;
+	font-size: 2em;
+	font-weight: bold;
+	letter-spacing: .06em;
+	margin-bottom: 0.87em;
+	margin-left: 1em;
+	margin-right: 0;
+	margin-top: 1.17em;
+}
+
+div#body {
+	background-color: white;
+	box-shadow: 0px 0px 15px rgba(109, 109, 109, 0.212);
+	padding: 10px 20px;
+}
+
+::-moz-selection {
+	color: rgb(0, 0, 0);
+	background: rgba(202, 202, 202, 0.61);
+}
+
+::selection {
+	color: rgb(0, 0, 0);
+	background: rgba(202, 202, 202, 0.61);
+}
