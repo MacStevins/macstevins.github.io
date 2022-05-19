@@ -1,5 +1,118 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
 * {
-	font-family: -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-family: Roboto;
+	margin: auto;
+	/* touch-action: none; */
+	user-select: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+div#body {
+	text-align: center;
+}
+
+footer {
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto 1.2em;
+}
+
+header {
+	margin: 1.2em auto 0em;
+	max-height: fit-content;
+}
+
+html, body {
+	height: 100%;
+	overflow: hidden;
+}
+
+footer div#socials {
+	display: inherit;
+}
+
+footer div#socials div {
+	display: block;
+	margin: auto .65em;
+	width: 2em;
+}
+
+footer a {
+	filter: grayscale(100%);
+	height: inherit;
+	transition: filter .25s;
+	width: inherit;
+}
+
+footer a:hover {
+	filter: grayscale(0%);
+	transition: filter .5s;
+}
+
+footer a img {
+	display: block;
+	margin: auto 0;
+	height: inherit;
+	width: inherit;
+}
+
+footer div#twitch {
+	height: 2em;
+}
+
+footer div#github a:link {
+	filter: contrast(0%);
+	transition: filter .25s;
+}
+
+footer div#github a:hover {
+	filter: contrast(100%);
+	transition: filter .5s;
+}
+
+footer div div#separator {
+	background-color: rgb(61, 61, 61);
+	margin: .1em .65em;
+	width: .1em;
+}
+
+div#body div#separator {
+	background-color: rgb(102, 102, 102);
+	height: .12em;
+	margin: .9em -1em;
+}
+
+div#body div#name {
+	font-family: "Open Sans";
+	font-size: 2.2em;
+	letter-spacing: .1em;
+	transition: .25s cubic-bezier(0.4, 0, 0.2, 1);
+	transition-property: color, letter-spacing;
+}
+
+div#body div#name:hover {
+	color: rgb(178, 94, 255);
+	letter-spacing: 0em;
+	transition: .25s ease-out;
+	transition-property: color, letter-spacing;
+}
+
+div#body div#projects a {
+	color: rgb(0, 0, 0);
+	font-size: 1.2em;
+	letter-spacing: .03em;
+	transition: letter-spacing .25s ease;
+}
+
+div#body div#projects a:hover {
+	letter-spacing: .18em;
+	transition: letter-spacing .3s ease;
 }
