@@ -6,7 +6,13 @@
 }
 
 a {
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-user-select: none;
 	text-decoration: none;
+	user-select: none;
 }
 
 body {
