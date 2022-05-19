@@ -6,9 +6,12 @@
 }
 
 a {
+	-moz-user-select: none;
+	-ms-user-select: none;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
-	-webkit-tap-highlight-color: transparent;
+	-webkit-user-select: none;
 	text-decoration: none;
+	user-select: none;
 }
 
 body {
@@ -34,7 +37,7 @@ header {
 
 html, body {
 	height: 100%;
-	overflow: hidden;
+	/* overflow: hidden; */
 }
 
 footer div#socials {
