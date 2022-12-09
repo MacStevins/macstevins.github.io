@@ -14,12 +14,16 @@
 				
 				$.ajax({
 					url: url,
-					dataType: "text",
+					type: "GET",
+					dataType: "jsonp",
 					crossDomain: true,
 					success: function (data) {
 						data = data.split(/\r?\n/);
 						data = data[Math.floor((Math.random() * data.length))]
 						$(document.body).append(data);
+					},
+					error: function (xhr, status, error) {
+						$(document.body).append("Failed to get data. " + status + ": " + xhr.responseText);
 					},
 					headers: {
 						accept: "text/plain",
