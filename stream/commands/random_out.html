@@ -2,23 +2,33 @@
 	<body>
 		<script src="/js/jquery-3.6.0.min.js"></script>
 		<script>
-			$.ajax({
-				url: new URLSearchParams(window.location.search).get("url"),
-				dataType: "text",
-				crossDomain: true,
-				success: function (data) {
-					console.log(data);
-					data = data.split(/\r?\n/);
-					console.log(data);
-					data = data[Math.floor((Math.random() * data.length))]
-					$(document.body).append(data);
-				},
-				headers: {
-					accept: "text/plain",
-					"Access-Control-Request-Method": "GET",
-					"Access-Control-Allow-Origin": "*"
+			function main() {
+				var url = new URLSearchParams(window.location.search).get("url");
+				
+				if(url === null) {
+					
+					$(document.body).append("Empty 'url' parameter");
+					return;
+				
 				}
-			});
+				
+				$.ajax({
+					url: url,
+					dataType: "text",
+					crossDomain: true,
+					success: function (data) {
+						data = data.split(/\r?\n/);
+						data = data[Math.floor((Math.random() * data.length))]
+						$(document.body).append(data);
+					},
+					headers: {
+						accept: "text/plain",
+						"Access-Control-Allow-Origin": "*"
+					}
+				});
+			}
+			
+			main();
 		</script>
 	</body>
 </html>
