@@ -60,15 +60,25 @@ footer a {
 
 footer a:hover {
 	filter: grayscale(0%);
-	transition: filter .5s
 }
 
 footer a img {
 	display: block;
-	margin: auto 0;
 	height: inherit;
+	margin: auto 0;
 	width: inherit
 }
+
+/* footer a object {
+	display: block;
+	height: inherit;
+	margin: auto 0;
+	width: inherit
+}
+
+footer a object svg * {	
+	fill: rgb(102, 102, 102);
+} */
 
 footer div#twitch {
 	height: 2em
@@ -81,7 +91,6 @@ footer div#github a:link {
 
 footer div#github a:hover {
 	filter: contrast(100%);
-	transition: filter .5s
 }
 
 footer div div#separator {
@@ -108,7 +117,6 @@ div#body div#name:hover {
 	color: rgb(178, 94, 255);
 	letter-spacing: 0em;
 	transition: .25s ease-out;
-	transition-property: color, letter-spacing
 }
 
 div#body div#projects a {
@@ -119,6 +127,6 @@ div#body div#projects a {
 }
 
 div#body div#projects a:hover {
-	letter-spacing: .18em;
-	transition: letter-spacing .3s ease
+	letter-spacing: .13em;
+	transition: .3s ease
 }

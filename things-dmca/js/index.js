@@ -1,13 +1,7 @@
+console.log("Hello, World");
 
-// var scriptId = "AKfycbz_lzsemhiF6tY7icy4uKwuxA0JdqvWHxYQKZSvC2CP_CcUQ9e23p6pICtmsKW4lv0a"
-// var sheetName = "Record Labels"; // Example
+// https://script.google.com/macros/s/AKfycbz_lzsemhiF6tY7icy4uKwuxA0JdqvWHxYQKZSvC2CP_CcUQ9e23p6pICtmsKW4lv0a/exec
 
-// var urlParam = {
-// 	sheetName
-// };
-// var urlTo = "https://script.google.com/macros/s/" + scriptId + "/exec?" + new URLSearchParams(urlParam);
-
-function setCookie(name, value) {
-	
-}
-
+$.getJSON("test/template/cloudheadrecords.json", function(data) {
+	console.log(btoa(JSON.stringify(data)));
+});
