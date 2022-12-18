@@ -1,7 +1,21 @@
 * {
 	font-family: Roboto;
 	margin: auto;
-	user-select: none
+	user-select: none;
+}
+
+html {
+	background-color: rgb(0, 0, 0);
+	height: fit-content;
+}
+
+body {
+	background-color: rgb(255, 255, 255);
+	display: flex;
+	flex-direction: column;
+	height: inherit;
+	justify-content: space-between;
+	min-height: 100vh;
 }
 
 a {
@@ -10,52 +24,61 @@ a {
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 	-webkit-user-select: none;
 	text-decoration: none;
-	user-select: none
-}
-
-body {
-	background-color: rgb(255, 255, 255);
-	display: flex;
-	flex-direction: column;
-	height: inherit;
-	justify-content: space-between
-}
-
-html {
-	background-color: rgb(0, 0, 0);
-	height: 100%
+	user-select: none;
 }
 
 div#body {
-	text-align: center
+	padding: 10rem 0rem;
+	text-align: center;
+}
+
+div#body div#name {
+	font-family: "Open Sans";
+	font-size: 2.2rem;
+	letter-spacing: .1rem;
+	transition: .25s cubic-bezier(0.4, 0, 0.2, 1);
+	transition-property: color, letter-spacing;
+}
+
+div#body div#name:hover {
+	color: rgb(178, 94, 255);
+	letter-spacing: 0rem;
+	transition: .25s ease-out;
+}
+
+div#body div#separator {
+	background-color: rgb(102, 102, 102);
+	height: .12rem;
+	margin: .9rem -1rem;
+}
+
+div#body div#projects div {
+	margin: .4rem auto;
+}
+
+div#body div#projects a {
+	color: rgb(0, 0, 0);
+	font-size: 1.2rem;
+	letter-spacing: .03rem;
+	transition: letter-spacing .25s ease;
+}
+
+div#body div#projects a:hover {
+	letter-spacing: .13rem;
+	transition: .3s ease;
 }
 
 footer {
 	display: flex;
 	flex-direction: column;
-	margin: 1.2em auto 1.2em
-}
-
-header {
-	margin: 1.2em auto 0em;
-	max-height: fit-content
-}
-
-footer div#socials {
-	display: inherit
-}
-
-footer div#socials div {
-	display: block;
-	margin: auto .65em;
-	width: 2em
+	margin: 1.2rem auto 1.2rem;
 }
 
 footer a {
 	filter: grayscale(100%);
 	height: inherit;
 	transition: filter .25s;
-	width: inherit
+	width: inherit;
 }
 
 footer a:hover {
@@ -66,67 +89,45 @@ footer a img {
 	display: block;
 	height: inherit;
 	margin: auto 0;
-	width: inherit
+	width: inherit;
 }
 
 /* footer a object {
 	display: block;
 	height: inherit;
 	margin: auto 0;
-	width: inherit
+	width: inherit;
 }
 
 footer a object svg * {	
 	fill: rgb(102, 102, 102);
 } */
 
+footer div#socials {
+	display: inherit;
+}
+
+footer div#socials div.icon {
+	display: block;
+	margin: auto .65rem;
+	width: 2rem;
+}
+
+footer div#socials div.separator {
+	background-color: rgb(61, 61, 61);
+	margin: .1rem .65rem;
+	width: .1rem;
+}
+
 footer div#twitch {
-	height: 2em
+	height: 2rem;
 }
 
 footer div#github a:link {
 	filter: contrast(0%);
-	transition: filter .25s
+	transition: filter .25s;
 }
 
 footer div#github a:hover {
 	filter: contrast(100%);
-}
-
-footer div div#separator {
-	background-color: rgb(61, 61, 61);
-	margin: .1em .65em;
-	width: .1em
-}
-
-div#body div#separator {
-	background-color: rgb(102, 102, 102);
-	height: .12em;
-	margin: .9em -1em
-}
-
-div#body div#name {
-	font-family: "Open Sans";
-	font-size: 2.2em;
-	letter-spacing: .1em;
-	transition: .25s cubic-bezier(0.4, 0, 0.2, 1);
-	transition-property: color, letter-spacing
-}
-
-div#body div#name:hover {
-	color: rgb(178, 94, 255);
-	letter-spacing: 0em;
-	transition: .25s ease-out;
-}
-
-div#body div#projects a {
-	color: rgb(0, 0, 0);
-	font-size: 1.2em;
-	letter-spacing: .03em;
-	transition: letter-spacing .25s ease
-}
-
-div#body div#projects a:hover {
-	letter-spacing: .13em;
-	transition: .3s ease
 }
