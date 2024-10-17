@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<link href="https://fonts.googleapis.com" rel="preconnect">
-		<link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
-		<link href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans:700&display=swap" rel="stylesheet">
-		<link href="css/index.css" rel="stylesheet">
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Home</title>
+		<link rel="preload" href="fonts/OpenSans-Bold.ttf" as="font" crossorigin>
+		<link rel="preload" href="fonts/Roboto-Regular.ttf" as="font" crossorigin>
+		<link href="css/global.css" rel="stylesheet">
+		<link href="css/index.css" rel="stylesheet">
+		<title>MacStevins | Home</title>
 	</head>
 	<body>
 		<div id="body">
@@ -16,7 +16,7 @@
 			<div id="separator"></div>
 			<div id="projects">
 				<div id="tdmca">
-					<a href="https://docs.google.com/spreadsheets/d/1ZGNDPnlc2fD7Nh_z-5dU_sdWylZoRmW9tSO7_IF8QdA/">Things DMCA (under construction)</a>
+					<a href="https://docs.google.com/spreadsheets/d/1ZGNDPnlc2fD7Nh_z-5dU_sdWylZoRmW9tSO7_IF8QdA">Things DMCA (under construction)</a>
 				</div>
 				<div id="splus">
 					<a href="https://github.com/MacStevins/SoundsPlus/">Sounds+ (Minecraft Mod)</a>
@@ -25,26 +25,26 @@
 		</div>
 		<footer>
 			<div id="socials">
-				<div id="twitch" class="icon">
-					<a href="https://www.twitch.tv/macstevins">
-						<img alt="twitch" src="/img/logos/twitch-glitch.svg">
+				<div class="icon" id="twitch">
+					<a href="https://twitch.tv/macstevins">
+						<img alt="Twitch" src="/img/logos/twitch-glitch.svg">
 						<!-- <object data="/img/logos/twitch-glitch.svg" type="image/svg+xml"></object> -->
 					</a>
 				</div>
-				<div id="twitter" class="icon">
-					<a href="https://www.twitter.com/themacstevins">
-						<img alt="twitch" src="/img/logos/twitter-logo.svg">
+				<div class="icon" id="twitter">
+					<a href="https://twitter.com/themacstevins">
+						<img alt="X (Twitter)" src="/img/logos/x.svg">
 					</a>
 				</div>
-				<div id="youtube" class="icon">
-					<a href="https://www.youtube.com/channel/UC6bBS-iaiLq3O3ZUMt0_4Pw">
-						<img alt="Youtube" src="/img/logos/youtube-logo.svg">
+				<div class="icon" id="youtube">
+					<a href="https://youtube.com/channel/UC6bBS-iaiLq3O3ZUMt0_4Pw">
+						<img alt="Youtube" src="/img/logos/youtube.svg">
 					</a>
 				</div>
 				<div class="separator"></div>
-				<div id="github" class="icon">
-					<a href="https://www.github.com/macstevins">
-						<img alt="github" src="/img/logos/github-darkmark-small.svg">
+				<div class="icon" id="github">
+					<a href="https://github.com/macstevins">
+						<img alt="GitHub" src="/img/logos/github.svg">
 					</a>
 				</div>
 			</div>
