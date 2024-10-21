@@ -1,0 +1,21 @@
+@font-face {
+	font-family: Roboto;
+	font-weight: 400;
+	src: url(/fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+	font-family: "Open Sans";
+	font-weight: 700;
+	src: url(/fonts/OpenSans-Bold.ttf);
+}
+
+* {
+	font-family: Roboto;
+	margin: auto;
+	user-select: none;
+}
+
+html {
+	background-color: #000
+}
