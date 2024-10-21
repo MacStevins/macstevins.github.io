@@ -2,7 +2,7 @@ body {
 	background-color: #fff;
 	display: flex;
 	flex-direction: column;
-	min-height: 100vh;
+	min-height: 100dvh;
 }
 
 a {
@@ -15,19 +15,19 @@ a {
 }
 
 div#body {
-	padding: 10rem 0rem;
+	padding: 10rem 0;
 	text-align: center;
 	
 	& div#name {
 		font-family: "Open Sans";
 		font-size: 2.2rem;
-		letter-spacing: .1rem;
+		letter-spacing: .08rem;
 		transition: .25s cubic-bezier(0.4, 0, 0.2, 1);
 		transition-property: color, letter-spacing;
 		
 		&:hover, &:focus {
 			color: #b25eff;
-			letter-spacing: 0rem;
+			letter-spacing: 0;
 			transition: .25s ease-out;
 		}
 	}
@@ -50,7 +50,7 @@ div#body {
 			transition: letter-spacing .25s ease;
 			
 			&:hover, &:focus {
-				letter-spacing: .13rem;
+				letter-spacing: .08rem;
 				transition: .3s ease;
 			}
 			
@@ -68,7 +68,7 @@ footer {
 		
 		& div.icon {
 			display: block;
-			margin: auto .65rem;
+			margin: auto 1rem;
 			width: 2rem;
 			
 			& a {
@@ -90,8 +90,16 @@ footer {
 				}
 			}
 			
-			& div#twitch {
-				height: 2rem;
+			&.contrast a {
+				filter: contrast(25%);
+				
+				&:hover {
+					filter: contrast(100%);
+				}
+			}
+			
+			&#mastodon {
+				display: none;
 			}
 		}
 		
@@ -101,13 +109,4 @@ footer {
 			width: .1rem;
 		}
 	}
-}
-
-footer div#github a:link {
-	filter: contrast(0%);
-	transition: filter .25s;
-}
-
-footer div#github a:hover {
-	filter: contrast(100%);
 }
