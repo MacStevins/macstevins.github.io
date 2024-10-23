@@ -19,3 +19,7 @@
 html {
 	background-color: #000
 }
+
+footer, header {
+	margin: 1.2rem auto 1.2rem;
+}

@@ -1,14 +1,8 @@
-* {
-	font-family: Roboto;
-	user-select: none;
-}
-
 a {
 	text-decoration: none;
 }
 
 body {
-	margin: auto;
 	max-width: 88.6em;
 	padding: .5em 0em;
 	width: 74%;

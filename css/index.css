@@ -15,10 +15,9 @@ a {
 }
 
 div#body {
-	padding: 10rem 0;
 	text-align: center;
 	
-	& div#name {
+	& #name {
 		font-family: "Open Sans";
 		font-size: 2.2rem;
 		letter-spacing: .08rem;
@@ -32,13 +31,13 @@ div#body {
 		}
 	}
 	
-	& div#separator {
+	& #separator {
 		background-color: #666;
 		height: .12rem;
 		margin: .9rem -1rem;
 	}
 	
-	& div#projects {
+	& #projects {
 		& div {
 			margin: .4rem auto;
 		}
@@ -61,12 +60,11 @@ div#body {
 footer {
 	display: flex;
 	flex-direction: column;
-	margin: 1.2rem auto 1.2rem;
 	
-	& div#socials {
+	& #socials {
 		display: inherit;
 		
-		& div.icon {
+		& .icon {
 			display: block;
 			margin: auto 1rem;
 			width: 2rem;
@@ -97,16 +95,16 @@ footer {
 					filter: contrast(100%);
 				}
 			}
-			
-			&#mastodon {
-				display: none;
-			}
 		}
 		
-		& div.separator {
+		& .separator {
 			background-color: #333;
 			margin: .1rem .65rem;
-			width: .1rem;
+			width: .12rem;
 		}
 	}
+}
+
+header {
+	
 }

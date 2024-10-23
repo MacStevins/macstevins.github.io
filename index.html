@@ -2,17 +2,21 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="preload" href="fonts/OpenSans-Bold.ttf" as="font" crossorigin>
-		<link rel="preload" href="fonts/Roboto-Regular.ttf" as="font" crossorigin>
+		<meta name="viewport" content="width=device-width,initial-scale=.6">
+		<link href="favicon.png" rel="icon">
 		<link href="css/global.css" rel="stylesheet">
 		<link href="css/index.css" rel="stylesheet">
+		<link as="font" crossorigin href="fonts/OpenSans-Bold.ttf" rel="preload">
+		<link as="font" crossorigin href="fonts/Roboto-Regular.ttf" rel="preload">
+		<script type="module" src="js/global.js"></script>
 		<title>MacStevins | Home</title>
 	</head>
 	<body>
+		<header>
+			
+		</header>
 		<div id="body">
-			<div id="name">MacStevins</div>
+			<h1 id="name">MacStevins</h1>
 			<div id="separator"></div>
 			<div id="projects">
 				<div id="tdmca">
@@ -25,28 +29,28 @@
 		</div>
 		<footer>
 			<div id="socials">
-				<div class="icon" id="twitch">
-					<a href="https://twitch.tv/macstevins">
-						<img alt="Twitch" src="/img/logos/twitch-glitch.svg">
-					</a>
-				</div>
-				<div class="icon" id="mastodon">
+				<div class="icon" id="mastodon" rel="me">
 					<a href="https://mastodon.social/@macstevins">
-						<img alt="Mastodon" src="/img/logos/mastodon.svg">
+						<img alt="Mastodon" src="img/logos/mastodon.svg">
 					</a>
 				</div>
-				<div class="icon contrast" id="twitter">
+				<div class="icon" id="twitch">
+					<a href="https://twitch.tv/macstevins" rel="me">
+						<img alt="Twitch" src="img/logos/twitch-glitch.svg">
+					</a>
+				</div>
+				<div class="icon contrast" id="twitter" rel="me">
 					<a href="https://twitter.com/themacstevins">
-						<img alt="X (Twitter)" src="/img/logos/x.svg">
+						<img alt="X (Twitter)" src="img/logos/x.svg">
 					</a>
 				</div>
-				<div class="icon" id="youtube">
+				<div class="icon" id="youtube" rel="me">
 					<a href="https://youtube.com/channel/UC6bBS-iaiLq3O3ZUMt0_4Pw">
-						<img alt="Youtube" src="/img/logos/youtube.svg">
+						<img alt="Youtube" src="img/logos/youtube.svg">
 					</a>
 				</div>
 				<div class="separator"></div>
-				<div class="icon contrast" id="github">
+				<div class="icon contrast" id="github" rel="me">
 					<a href="https://github.com/macstevins">
 						<img alt="GitHub" src="/img/logos/github.svg">
 					</a>
