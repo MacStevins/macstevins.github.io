@@ -1,3 +1,9 @@
+@font-face {
+	font-family: "Open Sans";
+	font-weight: 700;
+	src: url(/font/opensansBoldLatin.woff) format(woff);
+}
+
 body {
 	background-color: #fff;
 	display: flex;
@@ -6,20 +12,17 @@ body {
 }
 
 a {
-	-moz-user-select: none;
-	-ms-user-select: none;
-	-webkit-tap-highlight-color: transparent;
-	-webkit-user-select: none;
+	color: #000;
 	text-decoration: none;
-	user-select: none;
 }
 
-div#body {
+[body] {
 	text-align: center;
 	
-	& #name {
+	& [name] {
 		font-family: "Open Sans";
 		font-size: 2.2rem;
+		font-weight: 700;
 		letter-spacing: .08rem;
 		transition: .25s cubic-bezier(0.4, 0, 0.2, 1);
 		transition-property: color, letter-spacing;
@@ -31,19 +34,18 @@ div#body {
 		}
 	}
 	
-	& #separator {
+	& .separator {
 		background-color: #666;
 		height: .12rem;
 		margin: .9rem -1rem;
 	}
 	
-	& #projects {
+	& [projects] {
 		& div {
 			margin: .4rem auto;
 		}
 		
 		& a {
-			color: #000;
 			font-size: 1.2rem;
 			letter-spacing: .03rem;
 			transition: letter-spacing .25s ease;
@@ -59,13 +61,11 @@ div#body {
 
 footer {
 	display: flex;
-	flex-direction: column;
 	
-	& #socials {
+	& [socials] {
 		display: inherit;
 		
 		& .icon {
-			display: block;
 			margin: auto 1rem;
 			width: 2rem;
 			
@@ -81,10 +81,7 @@ footer {
 				
 				& img {
 					display: block;
-					height: inherit;
-					margin: auto 0;
 					pointer-events: none;
-					width: inherit;
 				}
 			}
 			
@@ -106,5 +103,7 @@ footer {
 }
 
 header {
-	
+	& themeChange {
+		
+	}
 }

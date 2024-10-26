@@ -1,16 +1,13 @@
 @font-face {
 	font-family: Roboto;
 	font-weight: 400;
-	src: url(/fonts/Roboto-Regular.ttf);
-}
-
-@font-face {
-	font-family: "Open Sans";
-	font-weight: 700;
-	src: url(/fonts/OpenSans-Bold.ttf);
+	src: url(/font/robotoRegularLatin.woff) format(woff);
 }
 
 * {
+	-ms-user-select: none;
+	/* -webkit-tap-highlight-color: transparent; */
+	-webkit-user-select: none;
 	font-family: Roboto;
 	margin: auto;
 	user-select: none;
