@@ -1,7 +1,5 @@
-let adrBar = window.location
+if(window.location.href.lastIndexOf("index.html"))
+	window.history.replaceState({}, "", window.location.href.replace("index.html", ""))
 
-if(adrBar.href.lastIndexOf("index.html"))
-	window.history.replaceState({}, "", adrBar.href.replace("index.html", ""))
-
-if(!adrBar.href.endsWith("/") && !adrBar.href.endsWith(adrBar.origin))
-	adrBar.href += "/"
+if(window.location.href.endsWith("/") && !window.location.href.endsWith(window.location.origin))
+	window.location.href = window.location.href.slice(0, -1)
