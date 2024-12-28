@@ -3,6 +3,6 @@ img/logos/orig/
 .*
 
 /things-dmca
-things-dmca.*
+/js/things-dmca.js
 
 *.orig.*
