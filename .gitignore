@@ -2,7 +2,7 @@ img/logos/orig/
 
 .*
 
-/things-dmca
-/js/things-dmca.js
+things-dmca/
+js/things-dmca.js
 
 *.orig.*
