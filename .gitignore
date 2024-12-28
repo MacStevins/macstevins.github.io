@@ -1,8 +1,6 @@
-img/logos/orig/
-
+# Hidden Files
 .*/
 
+# Things DMCA
 things-dmca/
 js/things-dmca.js
-
-*.orig.*
