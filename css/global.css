@@ -1,20 +1,17 @@
-@font-face {
-	font-family: Roboto;
-	font-weight: 400;
-	src: url(/font/robotoRegularLatin.woff) format(woff);
-}
 
 * {
+	-khtml-user-select: none;
 	-ms-user-select: none;
-	/* -webkit-tap-highlight-color: transparent; */
+	-moz-user-select: none;
+	-o-user-select: none;
 	-webkit-user-select: none;
-	font-family: Roboto;
 	margin: auto;
 	user-select: none;
 }
 
 html {
-	background-color: #000
+	background-color: #000;
+	font-family: Roboto;
 }
 
 footer, header {

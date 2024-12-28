@@ -4,6 +4,11 @@
 	src: url(/font/opensansBoldLatin.woff) format(woff);
 }
 
+a {
+	color: #000;
+	text-decoration: none;
+}
+
 body {
 	background-color: #fff;
 	display: flex;
@@ -11,15 +16,10 @@ body {
 	min-height: 100dvh;
 }
 
-a {
-	color: #000;
-	text-decoration: none;
-}
-
-[body] {
+main {
 	text-align: center;
 	
-	& [name] {
+	& name {
 		font-family: "Open Sans";
 		font-size: 2.2rem;
 		font-weight: 700;
@@ -34,13 +34,13 @@ a {
 		}
 	}
 	
-	& .separator {
+	& [separator] {
 		background-color: #666;
 		height: .12rem;
 		margin: .9rem -1rem;
 	}
 	
-	& [projects] {
+	& projects {
 		& div {
 			margin: .4rem auto;
 		}
@@ -62,10 +62,10 @@ a {
 footer {
 	display: flex;
 	
-	& [socials] {
+	& socials {
 		display: inherit;
 		
-		& .icon {
+		& icon {
 			margin: auto 1rem;
 			width: 2rem;
 			
@@ -85,7 +85,7 @@ footer {
 				}
 			}
 			
-			&.contrast a {
+			&[contrast] a {
 				filter: contrast(25%);
 				
 				&:hover {
@@ -94,7 +94,7 @@ footer {
 			}
 		}
 		
-		& .separator {
+		& [separator] {
 			background-color: #333;
 			margin: .1rem .65rem;
 			width: .12rem;
