@@ -1,0 +1,30 @@
+# A Github Action that minifies html/css/js and pushes it to a new branch
+name: purge-and-minify
+
+# Run on pushes to `main` branch
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  checkout-minify-push:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      # Install CLI tools
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - run: npm install -g minify
+
+      # Use CLI tools to minify, overwriting existing files
+      - run: find -P -iname "*.html" -o -iname "*.css" -o -iname "*.js" | xargs -0 echo
+      
+      # Push changes to `gh-pages` branch
+    #   - run: |
+    #       git config user.name MacStevins
+    #       git config user.email minifier@macstevins.github.com
+    #       git commit -am 'Automated minify of ${{ github.sha }}'
+    #       git push --force -u origin main:gh-pages

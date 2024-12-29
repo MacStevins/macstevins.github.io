@@ -1,0 +1,48 @@
+
+body[theme="dark"] {
+	--background: #1f1f1f;
+	--text: #fff;
+	--separator: #999;
+}
+
+body[theme="light"] {
+	--background: #fff;
+	--text: #000;
+	--separator: #666;
+}
+
+a, name {
+	color: var(--text);
+}
+
+body {
+	background-color: var(--background);
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	min-height: 100dvh;
+}
+
+header {
+	background-color: var(--background);
+	padding: 1.2rem;
+	position: sticky;
+	top: 0;
+	
+	& theme {
+		float: right;
+		height: 2rem;
+		width: 2rem;
+	}
+}
+
+html {
+	-khtml-user-select: none;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	-webkit-user-select: none;
+	background-color: #000;
+	font-family: Roboto;
+	user-select: none;
+}

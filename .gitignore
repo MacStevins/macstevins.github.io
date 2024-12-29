@@ -1,6 +1,9 @@
 # Hidden Files
-.*/
+.vscode/
 
 # Things DMCA
 things-dmca/
-js/things-dmca.js
+static/css/things-dmca.css
+static/js/things-dmca.js
+
+api/

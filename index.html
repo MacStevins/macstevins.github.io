@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<link as="font" crossorigin="anonymous" href="/font/robotoRegularLatin.woff" rel="preload">
-		<link as="font" crossorigin="anonymous" href="/font/opensansBoldLatin.woff" rel="preload">
+		<link as="font" crossorigin="anonymous" href="/static/font/robotoRegularLatin.woff" rel="preload">
+		<link as="font" crossorigin="anonymous" href="/static/font/opensansBoldLatin.woff" rel="preload">
 		<link href="favicon.png" rel="icon">
-		<link href="/css/global.css" rel="stylesheet">
-		<link href="/css/index.css" rel="stylesheet">
+		<link href="/static/css/global.css" rel="stylesheet">
+		<link href="/static/css/index.css" rel="stylesheet">
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=.6">
-		<script type="module" src="/js/global.js"></script>
+		<script type="module" src="/static/js/global.js"></script>
 		<title>MacStevins | Home</title>
 	</head>
-	<body>
+	<body theme="light">
 		<header>
-			<!-- <button themeChange>
-				<img alt="Site Theme">
-			</button> -->
+			<theme>
+				<input light type="image" src="/static/img/icon/sun.svg" alt="Site Theme">
+				<input dark type="image" src="/static/img/icon/moon.svg" alt="Site Theme">
+			</theme>
 		</header>
 		<main>
 			<name>MacStevins</name>
@@ -33,23 +34,23 @@
 			<socials>
 				<icon>
 					<a href="https://mastodon.social/@macstevins" rel="me">
-						<img alt="Mastodon" src="img/logo/mastodon.svg">
+						<img alt="Mastodon" src="/static/img/logo/mastodon.svg">
 					</a>
 				</icon>
 				<icon>
 					<a href="https://twitch.tv/macstevins" rel="me">
-						<img alt="Twitch" src="img/logo/twitchGlitch.svg">
+						<img alt="Twitch" src="/static/img/logo/twitchGlitch.svg">
 					</a>
 				</icon>
 				<icon>
 					<a href="https://youtube.com/channel/UC6bBS-iaiLq3O3ZUMt0_4Pw" rel="me">
-						<img alt="Youtube" src="img/logo/youtube.svg">
+						<img alt="Youtube" src="/static/img/logo/youtube.svg">
 					</a>
 				</icon>
 				<div separator></div>
-				<icon contrast>
+				<icon>
 					<a href="https://github.com/macstevins" rel="me">
-						<img alt="GitHub" src="/img/logo/github.svg">
+						<img alt="GitHub" src="/static/img/logo/github.svg">
 					</a>
 				</icon>
 			</socials>

@@ -1,0 +1,76 @@
+@font-face {
+	font-family: "Open Sans";
+	font-weight: 700;
+	src: url(/static/font/opensansBoldLatin.woff) format(woff);
+}
+
+a {
+	text-decoration: none;
+}
+
+footer {
+	margin: 1.2rem auto 1.2rem;
+	
+	& socials {
+		display: flex;
+		
+		& icon {
+			margin: auto 1rem;
+			width: 2rem;
+			
+			& a img {
+				display: block;
+				pointer-events: none;
+			}
+		}
+		
+		& [separator] {
+			background-color: var(--separator);
+			margin: .1rem .65rem;
+			width: .12rem;
+		}
+	}
+}
+
+main {
+	text-align: center;
+	margin: auto;
+	
+	& name {
+		font-family: "Open Sans";
+		font-size: 2.2rem;
+		font-weight: 700;
+		letter-spacing: .08rem;
+		transition: .25s ease-out;
+		transition-property: color, letter-spacing;
+		
+		&:hover, &:focus {
+			color: #b25eff;
+			letter-spacing: 0;
+			transition: .25s ease-out;
+		}
+	}
+	
+	& [separator] {
+		background-color: var(--separator);
+		height: .12rem;
+		margin: .9rem -1rem;
+	}
+	
+	& projects {
+		& div {
+			margin: .4rem auto;
+		}
+		
+		& a {
+			font-size: 1.2rem;
+			letter-spacing: .03rem;
+			transition: letter-spacing .25s ease;
+			
+			&:hover, &:focus {
+				letter-spacing: .08rem;
+				transition: .3s ease;
+			}
+		}
+	}
+}
