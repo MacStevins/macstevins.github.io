@@ -1,5 +1,5 @@
 # A Github Action that minifies html/css/js and pushes it to a new branch
-name: purge-and-minify
+name: minify
 
 # Run on pushes to `main` branch
 on:
@@ -8,7 +8,7 @@ on:
       - 'main'
 
 jobs:
-  checkout-minify-push:
+  minify:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -20,7 +20,7 @@ jobs:
       - run: npm install -g minify
 
       # Use CLI tools to minify, overwriting existing files
-      - run: find -P -iname "*.html" -o -iname "*.css" -o -iname "*.js" | xargs -0 echo
+      - run: find -P -iname "*.html" -o -iname "*.css" -o -iname "*.js" | minify
       
       # Push changes to `gh-pages` branch
     #   - run: |
