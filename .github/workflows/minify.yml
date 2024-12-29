@@ -26,5 +26,6 @@ jobs:
       - run: |
           git config user.name MacStevins
           git config user.email minifier@macstevins.github.com
+          git add .
           git commit -am 'Automated minify of ${{ github.sha }}'
           git push --force -u origin main:gh-pages
