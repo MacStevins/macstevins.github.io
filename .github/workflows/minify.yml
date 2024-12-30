@@ -20,7 +20,7 @@ jobs:
       - run: npm install -g minify
 
       # Use CLI tools to minify, overwriting existing files
-      - run: find -P * \( -iname "*.html" -o -iname "*.css" -o -iname "*.js" \) -exec echo {} \; -exec bash -c 'if [[ $1 =~ .css ]]; then minify --lightningcss "$1" > "${1%.*}.min.${1#*.}"; else minify "$1" > "${1%.*}.min.${1#*.}"; fi; mv "${1%.*}.min.${1#*.}" "$1"' sh {} \;
+      - run: find -P * \( -iname "*.html" -o -iname "*.css" -o -iname "*.js" \) -exec echo {} \; -exec bash -c 'if [[ $1 =~ .css ]]; then minify --css=lightningcss "$1" > "${1%.*}.min.${1#*.}"; else minify "$1" > "${1%.*}.min.${1#*.}"; fi; mv "${1%.*}.min.${1#*.}" "$1"' sh {} \;
       
       # Push changes to `gh-pages` branch
       - run: |
