@@ -22,7 +22,7 @@ jobs:
       - run: npm install -g terser
       
       # Finding the files and minifying it
-      - run: find -P * \( -iname "*.html" -o -iname "*.css" -o -iname "*.js" \) -exec echo {} \; -exec bash -c '( [[ $1 =~ .html ]] && html-minifier-terser --collapse-boolean-attributes --collapse-whitespace --minify-css true --minify-js ture --remove-attribute-quotes --remove-comments --remove-optional-tags --use-short-doctype -o $1 $1 ) || ( [[ $1 =~ .css ]] && lightningcss -m -o $1 $1 ) || ( [[ $1 =~ .js ]] && terser -o $1 $1 )' sh {} \
+      - run: find -P * \( -iname "*.html" -o -iname "*.css" -o -iname "*.js" \) -exec echo {} \; -exec bash -c '( [[ $1 =~ .html ]] && html-minifier-terser --collapse-boolean-attributes --collapse-whitespace --minify-css true --minify-js ture --remove-attribute-quotes --remove-comments --remove-optional-tags --use-short-doctype -o $1 $1 ) || ( [[ $1 =~ .css ]] && lightningcss -m -o $1 $1 ) || ( [[ $1 =~ .js ]] && terser -o $1 $1 )' sh {} \;
       
       # Pushing the changes to `gh-pages` branch
       - run: |
