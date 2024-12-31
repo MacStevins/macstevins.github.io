@@ -17,10 +17,14 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '16'
-      - run: npm install -g minify
+      - run: npm install -g html-minifier-terser
+      - run: npm install -g lightningcss-cli
+      - run: npm install -g terser
       
       # Finding the files and minifying it
-      - run: find -P * \( -iname "*.html" -o -iname "*.css" -o -iname "*.js" \) -exec echo {} \; -exec bash -c 'if [[ $1 =~ .css ]]; then minify --css "$1" > "${1%.*}.min.${1#*.}"; else minify "$1" > "${1%.*}.min.${1#*.}"; fi; mv "${1%.*}.min.${1#*.}" "$1"' sh {} \;
+      - run: find -P * \( -iname "*.html" -o -iname "*.css" -o -iname "*.js" \) -exec echo {} \; -exec bash -c '( [[ $1 =~ .html ]] && html-minifier-terser --collapse-boolean-attributes --collapse-whitespace --minify-css true --minify-js ture --remove-attribute-quotes --remove-comments --remove-optional-tags --use-short-doctype -o $1 $1 ) || ( [[ $1 =~ .css ]] && lightningcss -m -o $1 $1 ) || ( [[ $1 =~ .js ]] && terser -o $1 $1 )' sh {} \;
+      
+      # run: find -P * \( -iname "*.html" -o -iname "*.css" -o -iname "*.js" \) -exec echo {} \; -exec bash -c 'minify "$1" > "${1%.*}.min.${1#*.}"; fi; mv "${1%.*}.min.${1#*.}" "$1"' sh {} \;
       
       # Removing `minify` config file
       - run: rm .minify.json

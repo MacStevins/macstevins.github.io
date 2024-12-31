@@ -1,5 +1,6 @@
 # Hidden Files
 .vscode/
+*.bak.*
 
 # Things DMCA
 things-dmca/
