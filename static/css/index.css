@@ -1,5 +1,5 @@
 @font-face {
-	font-family: "Open Sans";
+	font-family: 'Open Sans';
 	font-weight: 700;
 	src: url(/static/font/opensansBoldLatin.woff) format(woff);
 }
@@ -18,7 +18,7 @@ footer {
 			margin: auto 1rem;
 			width: 2rem;
 			
-			& a img {
+			& a svg {
 				display: block;
 				pointer-events: none;
 			}
@@ -37,7 +37,7 @@ main {
 	margin: auto;
 	
 	& name {
-		font-family: "Open Sans";
+		font-family: 'Open Sans';
 		font-size: 2.2rem;
 		font-weight: 700;
 		letter-spacing: .08rem;

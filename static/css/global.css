@@ -1,26 +1,31 @@
-
-body[theme="dark"] {
-	--background: #1f1f1f;
-	--text: #fff;
-	--separator: #999;
-}
-
-body[theme="light"] {
-	--background: #fff;
-	--text: #000;
-	--separator: #666;
-}
-
-a, name {
-	color: var(--text);
-}
+/* @font-face {
+	font-family: Roboto;
+	font-weight: 700;
+	src: url(/static/font/robotoRegularLatin.woff) format(woff);
+} */
 
 body {
+	--background: #fff;
+	--github: #1b1f24;
+	--separator: #666;
+	--text: #000;
+	
 	background-color: var(--background);
 	display: flex;
 	flex-direction: column;
 	margin: 0;
 	min-height: 100dvh;
+	
+	&[darktheme] {
+		--background: #1f1f1f;
+		--github: var(--text);
+		--separator: #999;
+		--text: #fff;
+	}
+	
+	&[themechange], &[themechange] * {
+		transition: all .4s ease;
+	}
 }
 
 header {
@@ -45,4 +50,23 @@ html {
 	background-color: #000;
 	font-family: Roboto;
 	user-select: none;
+}
+
+loader {
+	background-color: var(--background);
+	backdrop-filter: blur(10px);
+	min-height: 100dvh;
+	min-width: 100dvw;
+	pointer-events: none;
+	position: fixed;
+	top: 0;
+	transition: opacity .8s ease;
+	
+	&[load-finish] {
+		opacity: 0;
+	}
+}
+
+a, name {
+	color: var(--text);
 }

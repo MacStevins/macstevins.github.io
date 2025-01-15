@@ -1,21 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 	<head>
-		<link as="font" crossorigin="anonymous" href="/static/font/robotoRegularLatin.woff" rel="preload">
-		<link as="font" crossorigin="anonymous" href="/static/font/opensansBoldLatin.woff" rel="preload">
-		<link href="favicon.png" rel="icon">
-		<link href="/static/css/global.css" rel="stylesheet">
-		<link href="/static/css/index.css" rel="stylesheet">
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width,initial-scale=.6">
-		<script type="module" src="/static/js/global.js"></script>
+		<link as='font' crossorigin href='/static/font/robotoRegularLatin.woff' rel='preload'>
+		<link as='font' crossorigin href='/static/font/opensansBoldLatin.woff' rel='preload'>
+		<link href='/favicon.png' rel='icon'>
+		<link href='/static/css/global.css' rel='stylesheet'>
+		<link href='/static/css/index.css' rel='stylesheet'>
+		<meta name='viewport' content='width=device-width,initial-scale=.6'>
+		<script src='/static/js/global.js'></script>
 		<title>MacStevins | Home</title>
 	</head>
-	<body theme="light">
+	<body>
+		<loader></loader>
 		<header>
 			<theme>
-				<input light type="image" src="/static/img/icon/sun.svg" alt="Site Theme">
-				<input dark type="image" src="/static/img/icon/moon.svg" alt="Site QTheme">
+				<!-- <input type='image' src='/static/img/icon/light.svg' alt='Site Theme'> -->
 			</theme>
 		</header>
 		<main>
@@ -23,34 +22,34 @@
 			<div separator></div>
 			<projects>
 				<div>
-					<a href="https://docs.google.com/spreadsheets/d/1ZGNDPnlc2fD7Nh_z-5dU_sdWylZoRmW9tSO7_IF8QdA">Things DMCA (under construction)</a>
+					<a href='https://docs.google.com/spreadsheets/d/1ZGNDPnlc2fD7Nh_z-5dU_sdWylZoRmW9tSO7_IF8QdA'>Things DMCA (under construction)</a>
 				</div>
 				<div>
-					<a href="https://github.com/MacStevins/SoundsPlus/">Sounds+ (Minecraft Mod)</a>
+					<a href='https://github.com/MacStevins/SoundsPlus/'>Sounds+ (Minecraft Mod)</a>
 				</div>
 			</projects>
 		</main>
 		<footer>
 			<socials>
-				<icon>
-					<a href="https://mastodon.social/@macstevins" rel="me">
-						<img alt="Mastodon" src="/static/img/logo/mastodon.svg">
+				<icon type='mastodon'>
+					<a href='https://mastodon.social/@macstevins' rel='me'>
+						<svg src='/static/img/logo/mastodon.svg'></svg>
 					</a>
 				</icon>
-				<icon>
-					<a href="https://twitch.tv/macstevins" rel="me">
-						<img alt="Twitch" src="/static/img/logo/twitchGlitch.svg">
+				<icon type='twitch'>
+					<a href='https://twitch.tv/macstevins' rel='me'>
+						<svg src='/static/img/logo/twitch.svg'></svg>
 					</a>
 				</icon>
-				<icon>
-					<a href="https://youtube.com/channel/UC6bBS-iaiLq3O3ZUMt0_4Pw" rel="me">
-						<img alt="Youtube" src="/static/img/logo/youtube.svg">
+				<icon type='youtube'>
+					<a href='https://youtube.com/channel/UC6bBS-iaiLq3O3ZUMt0_4Pw' rel='me'>
+						<svg src='/static/img/logo/youtube.svg'></svg>
 					</a>
 				</icon>
 				<div separator></div>
-				<icon>
-					<a href="https://github.com/macstevins" rel="me">
-						<img alt="GitHub" src="/static/img/logo/github.svg">
+				<icon type='github' diffDark>
+					<a href='https://github.com/macstevins' rel='me'>
+						<svg src='/static/img/logo/github.svg'></svg>
 					</a>
 				</icon>
 			</socials>
