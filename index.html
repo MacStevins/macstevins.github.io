@@ -1,58 +1,39 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang=en>
 	<head>
-		<link as='font' crossorigin href='/static/font/robotoRegularLatin.woff' rel='preload'>
-		<link as='font' crossorigin href='/static/font/opensansBoldLatin.woff' rel='preload'>
-		<link href='/favicon.png' rel='icon'>
-		<link href='/static/css/global.css' rel='stylesheet'>
-		<link href='/static/css/index.css' rel='stylesheet'>
-		<meta name='viewport' content='width=device-width,initial-scale=.6'>
-		<script src='/static/js/global.js'></script>
+		<link as=font crossorigin href=/res/font/opensansBoldLatin.woff rel=preload>
+		<link as=font crossorigin href=/res/font/robotoRegularLatin.woff rel=preload>
+		<link href=/res/img/ico.png rel=icon>
+		<link href=/res/css/com.css rel=stylesheet>
+		<meta name=viewport content='width=device-width,initial-scale=1.0'>
+		<script src=/res/js/com.js></script>
 		<title>MacStevins | Home</title>
 	</head>
-	<body>
-		<loader></loader>
-		<header>
-			<theme>
-				<!-- <input type='image' src='/static/img/icon/light.svg' alt='Site Theme'> -->
-			</theme>
-		</header>
-		<main>
-			<name>MacStevins</name>
-			<div separator></div>
-			<projects>
-				<div>
-					<a href='https://docs.google.com/spreadsheets/d/1ZGNDPnlc2fD7Nh_z-5dU_sdWylZoRmW9tSO7_IF8QdA'>Things DMCA (under construction)</a>
-				</div>
-				<div>
-					<a href='https://github.com/MacStevins/SoundsPlus/'>Sounds+ (Minecraft Mod)</a>
-				</div>
-			</projects>
-		</main>
-		<footer>
-			<socials>
-				<icon type='mastodon'>
-					<a href='https://mastodon.social/@macstevins' rel='me'>
-						<svg src='/static/img/logo/mastodon.svg'></svg>
-					</a>
-				</icon>
-				<icon type='twitch'>
-					<a href='https://twitch.tv/macstevins' rel='me'>
-						<svg src='/static/img/logo/twitch.svg'></svg>
-					</a>
-				</icon>
-				<icon type='youtube'>
-					<a href='https://youtube.com/channel/UC6bBS-iaiLq3O3ZUMt0_4Pw' rel='me'>
-						<svg src='/static/img/logo/youtube.svg'></svg>
-					</a>
-				</icon>
-				<div separator></div>
-				<icon type='github' diffDark>
-					<a href='https://github.com/macstevins' rel='me'>
-						<svg src='/static/img/logo/github.svg'></svg>
-					</a>
-				</icon>
-			</socials>
-		</footer>
+	<body style=visibility:hidden>
+		<top role=navigation>
+			<name role=banner>MacStevins</name>
+			<sep h></sep>
+			<a c href='/'>Home</a>
+			<a>Projects (Under Construction)</a>
+			<a href=credits>Credits</a>
+		</top>
+		<soc>
+			<a aria-label=Bluesky href=https://bsky.app/profile/themacstevins.bsky.social rel=me>
+				<svg src=/res/img/logo/bluesky.svg></svg>
+			</a>
+			<a aria-label=Twitch href=https://twitch.tv/macstevins rel=me>
+				<svg src=/res/img/logo/twitch.svg></svg>
+			</a>
+			<a aria-label=YouTube href=https://youtube.com/channel/@macstevins rel=me>
+				<svg src=/res/img/logo/youtube.svg></svg>
+			</a>
+			<a aria-label=Mastodon href=https://mastodon.social/@macstevins rel=me>
+				<svg src=/res/img/logo/mastodon.svg></svg>
+			</a>
+			<sep v></sep>
+			<a aria-label=GitHub href=https://github.com/macstevins rel=me>
+				<svg src=/res/img/logo/github.svg></svg>
+			</a>
+		</soc>
 	</body>
 </html>

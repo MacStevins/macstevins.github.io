@@ -1,7 +1,5 @@
-# A Github Action that minifies html/css/js and pushes it to a new branch
 name: minify
 
-# Run on pushes to `main` branch
 on:
   push:
     branches:
@@ -11,18 +9,27 @@ jobs:
   minify:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      
-      # Install CLI tools
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '16'
-      - run: npm install -g html-minifier-terser
-      - run: npm install -g lightningcss-cli
-      - run: npm install -g terser
+      # Installing tools
+      - uses: actions/checkout@v6.0.2
+      - run:
+          npm install -g minify;
+          apt update;
+          apt install -y moreutils
       
       # Finding the files and minifying it
-      - run: find -P * \( -iname *.html -o -iname *.css -o -iname *.js \) -exec echo {} \; -exec bash -c '( [[ $1 =~ .html ]] && html-minifier-terser --collapse-boolean-attributes --collapse-whitespace --minify-css true --minify-js true --remove-attribute-quotes --remove-comments --remove-optional-tags --use-short-doctype -o $1 $1 ) || ( [[ $1 =~ .css ]] && lightningcss -m -o $1 $1 ) || ( [[ $1 =~ .js ]] && terser -o $1 $1 )' sh {} \;
+      - run: >
+          find -P * \( -iname '*.html' -o -iname '*.css' -o -iname '*.js' \) -exec bash -c 'minify $1 | sponge $1' sh {} \; ;
+          find -P * -iname '*.json' -exec bash -c 'jq . -c $1 | sponge $1' sh {} \;
+      
+      # Removing junk files
+      - run: >
+          rm README.md;
+          find . -mindepth 1 -name '.*' -prune -exec rm -rf {} \;
+      
+      # Displaying files
+      - run: >
+          echo 'Available Files:';
+          find -P * -type f -exec echo -e ' > {}\n' \; -exec bash -c '( ! [[ $1 =~ .(png|woff) ]] && cat $1 && echo )' sh {} \;
       
       # Pushing the changes to `gh-pages` branch
       - run: |

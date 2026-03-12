@@ -1,11 +1,5 @@
 # Hidden Files
 .vscode/
-test/
+api/synced
 *.bak.*
-
-# Things DMCA
-things-dmca/
-static/css/things-dmca.css
-static/js/things-dmca.js
-
-api/
+*.dev.*

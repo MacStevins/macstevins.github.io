@@ -1,0 +1,7 @@
+<script>
+let q = location.search.slice(1)
+if(q && q.includes('http'))
+	window.location.replace(q)
+else
+	window.location.replace('/')
+</script>
