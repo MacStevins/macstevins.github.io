@@ -13,8 +13,8 @@ jobs:
       - uses: actions/checkout@v6.0.2
       - run:
           npm install -g minify;
-          apt update;
-          apt install -y moreutils
+          sudo apt update;
+          sudo apt install -y moreutils
       
       # Finding the files and minifying it
       - run: >
