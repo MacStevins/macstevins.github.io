@@ -24,7 +24,7 @@ jobs:
       # Removing junk files
       - run: >
           rm README.md;
-          find . -mindepth 1 -name '.git' -prune -o -name '.*' -exec rm -rf {} \;
+          find . -mindepth 1 -name '.*' -prune ! -name '.git' -exec rm -rf {} \;
       
       # Displaying files
       - run: >
