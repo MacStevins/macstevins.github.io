@@ -24,12 +24,12 @@ jobs:
       # Removing junk files
       - run: >
           rm README.md;
-          find . -mindepth 1 -name '.*' -prune -exec rm -rf {} \;
+          find . -mindepth 1 -name '.git' -prune -o -name '.*' -exec rm -rf {} \;
       
       # Displaying files
       - run: >
           echo 'Available Files:';
-          find -P * -type f -exec echo -e ' > {}\n' \; -exec bash -c '( ! [[ $1 =~ .(png|woff) ]] && cat $1 && echo )' sh {} \;
+          find -P * -type f -exec echo -e ' > {}\n' \; -exec bash -c '( ! [[ $1 =~ .(jpg|png|woff) ]] && cat $1 && echo )' sh {} \;
       
       # Pushing the changes to `gh-pages` branch
       - run: |
