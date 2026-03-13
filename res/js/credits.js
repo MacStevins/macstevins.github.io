@@ -41,7 +41,7 @@ async function initCredits() {
 		
 		// A let tL = Object.keys(t[1]).length
 		Object.entries(t[1]).forEach(i => {
-			c.insertAdjacentHTML('beforeend', `<a href='#${t[0]}=${i[0]}'><img src='credits/data/${t[0]}/${i[0]}.jpg'><div>${i[1]}`)
+			c.insertAdjacentHTML('beforeend', `<a href='#${t[0]}=${i[0]}'><img src='/credits/data/${t[0]}/${i[0]}.jpg'><div>${i[1]}`)
 			
 			// A tL--
 		})
