@@ -1,15 +1,1 @@
-{
-	"tool": [
-		"editor.audio-video.kdenlive:24.08",
-		"recording.audio-video.obs:30.2",
-		"editor.audio.reaper:7.06",
-		"ai.stem.x-minus",
-		"vst.minimeters:0.8:demo",
-		"vst.zleq",
-		"editor.photo.gimp:2.10"
-	],
-	"music": {
-		"Imagine Dragons ft. JID - Enemy (Opening Title Version)": "https://youtu.be/K8ZAr2O8ekc",
-		"Imagine Dragons - Enemy": "https://youtu.be/vxa8ShIm9yw"
-	}
-}
+{"tool":["editor.audio-video.kdenlive:24.08","recording.audio-video.obs:30.2","editor.audio.reaper:7.06","ai.stem.x-minus","vst.minimeters:0.8:demo","vst.zleq","editor.photo.gimp:2.10"],"music":{"Imagine Dragons ft. JID - Enemy (Opening Title Version)":"https://youtu.be/K8ZAr2O8ekc","Imagine Dragons - Enemy":"https://youtu.be/vxa8ShIm9yw"}}
