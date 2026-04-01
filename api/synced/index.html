@@ -2,8 +2,11 @@
 <script>
 history.replaceState({}, '', location.href.replace(/\/index\.html/, ''))
 
-const h = new URLSearchParams((location.hash.slice(1) + location.search).replace(/\?|#/, '&'))
-
-if(h) window.location.replace('http://localhost:' + h.get('state').split('_')[1] + '/' + h.toString())
-else window.location.replace('/')
+try {
+	const h = new URLSearchParams((location.hash.slice(1) + location.search).replace(/\?|#/, '&'))
+	window.location.replace('http://localhost:' + h.get('state').split('_')[1] + '/' + h.toString())
+}
+catch(_) {
+	window.location.replace('/')
+}
 </script>
