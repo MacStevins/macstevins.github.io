@@ -1,12 +1,1 @@
-<meta name="referrer" content="no-referrer">
-<script>
-history.replaceState({}, '', location.href.replace(/\/index\.html/, ''))
-
-try {
-	const h = new URLSearchParams((location.hash.slice(1) + location.search).replace(/\?|#/, '&'))
-	window.location.replace('http://localhost:' + h.get('state').split('_')[1] + '/' + h.toString())
-}
-catch(_) {
-	window.location.replace('/')
-}
-</script>
+<meta name=referrer content=no-referrer><script>history.replaceState({},"",location.href.replace(/\/index\.html/,""));try{const t=new URLSearchParams((location.hash.slice(1)+location.search).replace(/\?|#/,"&"));window.location.replace("http://localhost:"+t.get("state").split("_")[1]+"/"+t.toString())}catch(t){window.location.replace("/")}</script>

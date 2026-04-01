@@ -1,10 +1,1 @@
-{
-	"tool": [
-		"editor.audio-video.hitfilm:12"
-	],
-	"video": {
-		"When a soda can is empty": "https://youtu.be/RAzuy7UxlE8",
-		"\"Oh, Damn\" LMAOOO": "https://youtu.be/NZOFukA2V0A",
-		"You're Finally Awake": "https://youtu.be/A00146_2Y2U"
-	}
-}
+{"tool":["editor.audio-video.hitfilm:12"],"video":{"When a soda can is empty":"https://youtu.be/RAzuy7UxlE8","\"Oh, Damn\" LMAOOO":"https://youtu.be/NZOFukA2V0A","You're Finally Awake":"https://youtu.be/A00146_2Y2U"}}

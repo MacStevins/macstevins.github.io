@@ -1,15 +1,1 @@
-history.replaceState({}, '', location.href.replace(/\/index\.html/, ''))
-
-let initFunc = []
-
-addEventListener('DOMContentLoaded', async _ => {
-	await Promise.all(initFunc.map(i => typeof i === 'function' && i()))
-	
-	await Promise.all([...document.querySelectorAll('svg')].map(async e => {
-		let s = e.getAttribute('src'), d = await fetch(s)
-		
-		e.outerHTML = d.ok ? await d.text() : e.parentElement.getAttribute('aria-label') || s || d.status
-	}))
-	
-	document.body.removeAttribute('style')
-})
+history.replaceState({},'',location.href.replace('\/index\.html',''));let initFunc=[];addEventListener('DOMContentLoaded',async _=>{await Promise.all(initFunc.map(i=>i?.()));await Promise.all(document.querySelectorAll('svg').map(async e=>{let s=e.getAttribute('src'),d=await fetch(s);e.outerHTML=d.ok?await d.text():e.parentElement.getAttribute('aria-label')||s||d.status}));document.body.removeAttribute('style')});
