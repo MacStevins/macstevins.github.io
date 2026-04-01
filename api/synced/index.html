@@ -1,0 +1,9 @@
+<meta name="referrer" content="no-referrer">
+<script>
+history.replaceState({}, '', location.href.replace(/\/index\.html/, ''))
+
+const h = new URLSearchParams((location.hash.slice(1) + location.search).replace(/\?|#/, '&'))
+
+if(h) window.location.replace('http://localhost:' + h.get('state').split('_')[1] + '/' + h.toString())
+else window.location.replace('/')
+</script>

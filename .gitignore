@@ -1,5 +1,6 @@
 # Hidden Files
+.cache/
 .vscode/
-api/synced
+.fiveserverrc
 *.bak.*
 *.dev.*
