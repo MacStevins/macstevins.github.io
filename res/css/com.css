@@ -1,14 +1,14 @@
 @font-face {
 	font-family: 'Open Sans';
-	src: url('/res/font/opensansBoldLatin.woff');
+	src: url(/res/font/opensansBoldLatin.woff)
 }
 
 @font-face {
 	font-family: Roboto;
-	src: url('/res/font/robotoRegularLatin.woff');
+	src: url(/res/font/robotoRegularLatin.woff)
 }
 
-:not(soc) > a[href^='http']::after {
+:not(soc) > a[href^=http]::after {
 	content: ' \2197';
 	font-size: .6rem;
 	vertical-align: super
@@ -26,11 +26,10 @@ body {
 }
 
 html {
-	--bg: #fdfcfe;
 	--sec: #666;
 	--txt: #111;
 	
-	background: var(--bg);
+	background: #fdfcfe;
 	display: flex;
 	font-family: Roboto;
 	min-height: 100dvh;
