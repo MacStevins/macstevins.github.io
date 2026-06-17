@@ -1,10 +1,1 @@
-{
-	"tool": [
-		"editor.audio-video.hitfilm:13"
-	],
-	"video": {
-		"FlorkOfCows Antics #13 \"The Tago Bell Series Pt 1\"": "https://youtu.be/qfxlMY1ifoI",
-		"FlorkOfCows Antics #14 \"The Tago Bell Series Pt 2\"": "https://youtu.be/mPKMINTTGw8",
-		"FlorkOfCows Antics #15 \"The Tago Bell Series Finale\"": "https://youtu.be/4HFF5Mblc"
-	}
-}
+{"tool":["editor.audio-video.hitfilm:13"],"video":{"FlorkOfCows Antics #13 \"The Tago Bell Series Pt 1\"":"https://youtu.be/qfxlMY1ifoI","FlorkOfCows Antics #14 \"The Tago Bell Series Pt 2\"":"https://youtu.be/mPKMINTTGw8","FlorkOfCows Antics #15 \"The Tago Bell Series Finale\"":"https://youtu.be/4HFF5Mblc"}}

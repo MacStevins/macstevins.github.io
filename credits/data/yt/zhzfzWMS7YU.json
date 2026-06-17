@@ -1,14 +1,1 @@
-{
-	"tool": [
-		"editor.audio-video.hitfilm:13"
-	],
-	"music": {
-		"Pokemon Theme Song Instrumental No Vocals": "https://youtu.be/jjX0VFUav2c"
-	},
-	"audio": {
-		"Spacebar by Kodack": "https://freesound.org/people/Kodack/sounds/256515"
-	},
-	"video": {
-		"Late Night Tumblr Posts \"The One Where He Sings\"": "https://youtu.be/6sIin2zt8mg"
-	}
-}
+{"tool":["editor.audio-video.hitfilm:13"],"music":{"Pokemon Theme Song Instrumental No Vocals":"https://youtu.be/jjX0VFUav2c"},"audio":{"Spacebar by Kodack":"https://freesound.org/people/Kodack/sounds/256515"},"video":{"Late Night Tumblr Posts \"The One Where He Sings\"":"https://youtu.be/6sIin2zt8mg"}}
