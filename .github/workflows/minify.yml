@@ -21,10 +21,10 @@ jobs:
           find -P * \( -iname '*.html' -o -iname '*.css' -o -iname '*.js' \) -exec bash -c 'minify $1 | sponge $1' sh {} \; ;
           find -P * -iname '*.json' -exec bash -c 'jq . -c $1 | sponge $1' sh {} \;
       
-      # Removing junk files
-      - run: >
-          rm README.md;
-          find . -mindepth 1 -name '.*' -prune ! -name '.git' ! -name '.well-known' -exec rm -rf {} \;
+      # # Removing junk files
+      # - run: >
+      #     rm README.md;
+      #     find . -mindepth 1 -name '.*' -prune ! -name '.git' ! -name '.well-known' -exec rm -rf {} \;
       
       # Displaying files
       - run: >
