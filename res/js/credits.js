@@ -35,25 +35,18 @@ async function initCredits() {
 				)
 				.catch(_ => location.replace('/credits'))
 			}`)
+		case '':
+			return Object.entries(db).forEach(t => {
+				if(t[0] == 'tool')
+					return
+				
+				Object.entries(t[1]).forEach(i => {
+					c.insertAdjacentHTML('beforeend', `<a href='#${t[0]}=${i[0]}'><img src='/credits/data/${t[0]}/${i[0]}.jpg'><div>${i[1]}`)
+				})
+			})
 		default:
-			if(h[0])
-				location.replace('/credits')
+			location.replace('/credits')
 	}
-	
-	Object.entries(db).forEach(t => {
-		if(t[0] == 'tool')
-			return
-		
-		// A let tL = Object.keys(t[1]).length
-		Object.entries(t[1]).forEach(i => {
-			c.insertAdjacentHTML('beforeend', `<a href='#${t[0]}=${i[0]}'><img src='/credits/data/${t[0]}/${i[0]}.jpg'><div>${i[1]}`)
-			
-			// A tL--
-		})
-		
-		// A if(tL != 0)
-		// A	c.insertAdjacentHTML('beforeend', `<a href='#more=${t[0]}'>View More`)
-	})
 }
 
 initFunc.push(initCredits)
