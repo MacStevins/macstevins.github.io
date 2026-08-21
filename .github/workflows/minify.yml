@@ -29,7 +29,7 @@ jobs:
       # Displaying files
       - run: >
           echo 'Available Files:';
-          find -P * -type f -exec echo -e ' > {}' \; -exec bash -c '( ! [[ $1 =~ .(jpg|png|woff) ]] && cat $1 && echo )' sh {} \;
+          find -P * -type f -exec echo -e ' > {}' \; -exec bash -c '( ! [[ {} =~ .(jpg|png|woff) ]] && awk 1 {} )' \; , -exec echo \;
       
       # Pushing the changes to `gh-pages` branch
       - run: |
